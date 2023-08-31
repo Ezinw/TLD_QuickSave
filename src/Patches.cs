@@ -35,7 +35,8 @@ namespace QuickSave
                 if (GameManager.IsMainMenuActive())
                     return;
 
-                if (GameManager.GetExperienceModeManagerComponent().InCustomMode())
+                if (GameManager.GetExperienceModeManagerComponent().InCustomMode()||
+                    GameManager.GetExperienceModeManagerComponent().IsChallengeActive())
                 {
                     SaveSlotInfo quickSaveSlot = SaveGameSystem.GetNewestSaveSlotForActiveGame();
 
@@ -44,7 +45,10 @@ namespace QuickSave
                         GameManager.LoadSaveGameSlot(quickSaveSlot);
                     }
                 }
-                if (GameManager.GetExperienceModeManagerComponent().IsChallengeActive())
+                if (ExperienceModeManager.GetCurrentExperienceModeType() == ExperienceModeType.Pilgrim    ||
+                    ExperienceModeManager.GetCurrentExperienceModeType() == ExperienceModeType.Voyageur   ||
+                    ExperienceModeManager.GetCurrentExperienceModeType() == ExperienceModeType.Stalker    ||
+                    ExperienceModeManager.GetCurrentExperienceModeType() == ExperienceModeType.Interloper)
                 {
                     SaveSlotInfo quickSaveSlot = SaveGameSystem.GetNewestSaveSlotForActiveGame();
 
@@ -52,45 +56,11 @@ namespace QuickSave
                     {
                         GameManager.LoadSaveGameSlot(quickSaveSlot);
                     }
+            
                 }
-                if (ExperienceModeManager.GetCurrentExperienceModeType() == ExperienceModeType.Pilgrim)
-                {
-                    SaveSlotInfo quickSaveSlot = SaveGameSystem.GetNewestSaveSlotForActiveGame();
-
-                    if (quickSaveSlot != null)
-                    {
-                        GameManager.LoadSaveGameSlot(quickSaveSlot);
-                    }
-                }
-                if (ExperienceModeManager.GetCurrentExperienceModeType() == ExperienceModeType.Voyageur)
-                {
-                    SaveSlotInfo quickSaveSlot = SaveGameSystem.GetNewestSaveSlotForActiveGame();
-
-                    if (quickSaveSlot != null)
-                    {
-                        GameManager.LoadSaveGameSlot(quickSaveSlot);
-                    }
-                }
-                if (ExperienceModeManager.GetCurrentExperienceModeType() == ExperienceModeType.Stalker)
-                {
-                    SaveSlotInfo quickSaveSlot = SaveGameSystem.GetNewestSaveSlotForActiveGame();
-
-                    if (quickSaveSlot != null)
-                    {
-                        GameManager.LoadSaveGameSlot(quickSaveSlot);
-                    }
-                }
-                if (ExperienceModeManager.GetCurrentExperienceModeType() == ExperienceModeType.Interloper)
-                {
-                    SaveSlotInfo quickSaveSlot = SaveGameSystem.GetNewestSaveSlotForActiveGame();
-
-                    if (quickSaveSlot != null)
-                    {
-                        GameManager.LoadSaveGameSlot(quickSaveSlot);
-                    }
-                }
-
+                
             }
+        
         }
 
     }
