@@ -5,6 +5,7 @@
 Requirements:
 - [The Long Dark](https://www.thelongdark.com/) (Game version 2.22)
 - [MelonLoader](https://github.com/LavaGang/MelonLoader/) (0.6.1)
+- [ModSettings](https://github.com/DigitalzombieTLD/ModSettings/releases) (2.0.0)
 
 Thank you:
 
