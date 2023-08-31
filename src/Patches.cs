@@ -71,7 +71,8 @@ namespace QuickSave
     {
         static bool Prefix(GameAudioManager __instance)
         {
-            if (Input.GetKeyDown(KeyCode.F5))
+            if (Input.GetKeyDown(KeyCode.F5) ||
+                Input.GetKeyDown(KeyCode.F6))
             {
                 AudioSource audioSource = __instance.gameObject.GetComponent<AudioSource>();
 
@@ -82,18 +83,7 @@ namespace QuickSave
                     return false;
                 }
             }
-            if (Input.GetKeyDown(KeyCode.F6))
-            {
-                AudioSource audioSource = __instance.gameObject.GetComponent<AudioSource>();
-
-                if (audioSource.clip != null && audioSource.clip.name == "PlayGUIError")
-                {
-                    audioSource.Stop();
-
-                    return false;
-                }
-            }
-
+            
             return true;
         }
     }
