@@ -38,7 +38,8 @@ namespace QuickSave
                 if (ExperienceModeManager.GetCurrentExperienceModeType() == ExperienceModeType.Pilgrim ||
                     ExperienceModeManager.GetCurrentExperienceModeType() == ExperienceModeType.Voyageur ||
                     ExperienceModeManager.GetCurrentExperienceModeType() == ExperienceModeType.Stalker ||
-                    ExperienceModeManager.GetCurrentExperienceModeType() == ExperienceModeType.Interloper)
+                    ExperienceModeManager.GetCurrentExperienceModeType() == ExperienceModeType.Interloper ||
+                    ExperienceModeManager.GetCurrentExperienceModeType() == ExperienceModeType.Misery)
                 {
                     SaveSlotInfo quickSaveSlot = SaveGameSystem.GetNewestSaveSlotForActiveGame();
 
