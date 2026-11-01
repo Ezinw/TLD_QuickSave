@@ -3,7 +3,7 @@
 A mod for The Long Dark to enable the quicksave/quickload function using the F5/F6 keys.
 
 - Requirements:
-- [The Long Dark](https://www.thelongdark.com/) (v2.51)
+- [The Long Dark](https://www.thelongdark.com/) (v2.59)
 - [MelonLoader](https://github.com/LavaGang/MelonLoader.Installer/blob/master/README.md#how-to-install-re-install-or-update-melonloader/) (v0.7.2)
 
 Thank you:
